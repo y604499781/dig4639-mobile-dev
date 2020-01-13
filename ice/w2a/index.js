@@ -1,3 +1,4 @@
+var x = 0;
 function scopeDemo() {
     console.log(x)
     let a = 3, b = 4, c = 5;
@@ -12,7 +13,7 @@ function scopeDemo() {
 
 function runOnLoad()
 {
-    console.log(x);
+    // console.log(x);
     var submitButton = document.getElementById("submitButton");
     submitButton.addEventListener("click",onClick);
     var submitButton = document.getElementById("");
