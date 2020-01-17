@@ -5,4 +5,6 @@ This repository contains work completed during Spring 2020 in Dr. Murray's DIG46
 The *ice* folder contains in-class exercises. 
 
 ## About Me
-This should be replaced.
+Determined senior web design student at University of Central Florida with a GPA of 3.5 is looking to fill the Web Application Developer position at Workbay LLC. Wishing to apply JavaScript and React skills to help complete projects at the Workbay LLC and be part of the great team.
+
+LinkedIn Profile: https://www.linkedin.com/in/yichen1314/
