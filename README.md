@@ -7,4 +7,7 @@ The *ice* folder contains in-class exercises.
 ## About Me
 This should be replaced.
 
-This is the change.
+## Merging
+ 1. Item 1 [Google](http://www.google.com)
+ 1. Item 2
+ 1. Item 3
