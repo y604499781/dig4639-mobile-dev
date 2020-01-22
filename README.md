@@ -8,3 +8,7 @@ The *ice* folder contains in-class exercises.
 This should be replaced.
 
 This is the change.
+
+## Conflicts
+
+This section represents code on the server that isn't on the local repository.
