@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/ice/w4/index.js",
+            "program": "${workspaceFolder}/ice/w2a/node_index.js",
             "skipFiles": [
                 "<node_internals>/**"
             ]
