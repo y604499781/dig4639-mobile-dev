@@ -1,0 +1,19 @@
+{
+  "name": "dig4639-mobile-dev",
+  "version": "1.0.0",
+  "description": "This repository contains work completed during Spring 2020 in Dr. Murray's DIG4639: Mobile Development class.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucidbard/dig4639-mobile-dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucidbard/dig4639-mobile-dev/issues"
+  },
+  "homepage": "https://github.com/lucidbard/dig4639-mobile-dev#readme"
+}
