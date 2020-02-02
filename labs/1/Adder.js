@@ -3,7 +3,7 @@ class Adder {
         this.props = props;
     }
     sum() {
-        this.props.a+this.props.b;
+        return this.props.a+this.props.b;
     }
     render() {
         return `<p>
