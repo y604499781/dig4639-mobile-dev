@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/dig4639-mobile-dev/static/css/main.55d72bbf.chunk.css",
+    "main.js": "/react-gh-pages/dig4639-mobile-dev/static/js/main.e98f6a81.chunk.js",
+    "main.js.map": "/react-gh-pages/dig4639-mobile-dev/static/js/main.e98f6a81.chunk.js.map",
+    "runtime-main.js": "/react-gh-pages/dig4639-mobile-dev/static/js/runtime-main.06a826b7.js",
+    "runtime-main.js.map": "/react-gh-pages/dig4639-mobile-dev/static/js/runtime-main.06a826b7.js.map",
+    "static/js/2.3ded2b1a.chunk.js": "/react-gh-pages/dig4639-mobile-dev/static/js/2.3ded2b1a.chunk.js",
+    "static/js/2.3ded2b1a.chunk.js.map": "/react-gh-pages/dig4639-mobile-dev/static/js/2.3ded2b1a.chunk.js.map",
+    "index.html": "/react-gh-pages/dig4639-mobile-dev/index.html",
+    "precache-manifest.d94cdde32ba758f345b8046be0db6e33.js": "/react-gh-pages/dig4639-mobile-dev/precache-manifest.d94cdde32ba758f345b8046be0db6e33.js",
+    "service-worker.js": "/react-gh-pages/dig4639-mobile-dev/service-worker.js",
+    "static/css/main.55d72bbf.chunk.css.map": "/react-gh-pages/dig4639-mobile-dev/static/css/main.55d72bbf.chunk.css.map",
+    "static/js/2.3ded2b1a.chunk.js.LICENSE.txt": "/react-gh-pages/dig4639-mobile-dev/static/js/2.3ded2b1a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.06a826b7.js",
+    "static/js/2.3ded2b1a.chunk.js",
+    "static/css/main.55d72bbf.chunk.css",
+    "static/js/main.e98f6a81.chunk.js"
+  ]
+}
