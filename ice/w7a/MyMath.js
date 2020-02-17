@@ -15,7 +15,7 @@ function AddList(arr) {
        result = undefined;
        break;
      }
-      result = result + arr[i];
+      result = result + elem;
     }
   }
   return result;
