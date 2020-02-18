@@ -1,4 +1,4 @@
-import { Sum, AddList, DivideBy} from './MyMath.js'
+import { Sum, AddList, DivideBy, ContainsString} from './MyMath.js'
 
 
 describe("Sum", () => {
@@ -54,12 +54,41 @@ describe("AddList", () => {
 
 })
 
-/*describe("DivideBy", () => {
-  test('Whether undefined is returned on invaild type', () => {
-    expect(DivideBy(1, "Test")).toBeUndefined()
+describe("DivideBy", () => {
+  test('Tests if undefined element returns undefined', () => {
+    let a = 4;
+    let b =  undefined;
+    expect(DivideBy(a,b)).toBeUndefined();
   })
-}) */
+  test('Tests if b = 0 returns undefined', () => {
+    let a = 10;
+    let b = 0;
+    expect(DivideBy(a,b)).toBeUndefined();
+  })
+  test('Tests if b is not a number returns undefined', () => {
+    let a = 10;
+    let b = "word";
+    expect(DivideBy(a,b)).toBeUndefined();
+  })
+})
 
+describe("ContainsString", () => {
+  test('Tests if a is a string', () => {
+    let a = 2;
+    let b = "hello world";
+    expect(ContainsString(a,b)).toBe(false);
+  })
+  test('Tests if b is a string', () => {
+    let a = "huh";
+    let b = 48;
+    expect(ContainsString(a,b)).toBe(false);
+  })
+  test('Tests if a is a substring of b', () => {
+    let a = "ello";
+    let b = "hello world";
+    expect(ContainsString(a,b)).toBe(true);
+  })
+})
 
 // Examples for Null
 test('null', () => {

@@ -22,18 +22,25 @@ function AddList(arr) {
 }
 
 function DivideBy(a, b) {
+  let result = undefined;
   if(typeof a == "number" && typeof b == "number" && b != 0) {
     result = a/b
   }
   return result;
 }
 
-function ContainsString() {
-
+function ContainsString(a, b) {
+  let result = false;
+  if(typeof a == "string" && typeof b == "string") {
+    if(b.includes(a)) {
+      result = true;
+    } 
+  }
+  return result;
 }
 
 function ReSortedNumbers() {
 
 }
 
-export { Sum, AddList, DivideBy};
+export { Sum, AddList, DivideBy, ContainsString};
