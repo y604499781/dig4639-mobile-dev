@@ -1,4 +1,4 @@
-import { Sum, AddList, DivideBy, ContainsString} from './MyMath.js'
+import { Sum, AddList, DivideBy, ContainsString, ReSortedNumbers} from './MyMath.js'
 
 
 describe("Sum", () => {
@@ -87,6 +87,13 @@ describe("ContainsString", () => {
     let a = "ello";
     let b = "hello world";
     expect(ContainsString(a,b)).toBe(true);
+  })
+})
+
+describe("ReSortedNumbers", () => {
+  test("Tests if non number array element returns null", () => {
+    let arr = [2, "three", false];
+    expect(ReSortedNumbers(arr)).toBe(null);
   })
 })
 

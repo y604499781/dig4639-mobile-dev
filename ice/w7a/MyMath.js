@@ -39,8 +39,19 @@ function ContainsString(a, b) {
   return result;
 }
 
-function ReSortedNumbers() {
-
+function ReSortedNumbers(arr) {
+  let result = null;
+  if (Array.isArray(arr) && arr.length >0) {
+    result = [];
+    for(var i=0; i<arr.length; i++) {
+     if(typeof i != "number") {
+       result = null;
+       break
+     }
+    }
+    result = arr.sort();
+  }
+  return result;
 }
 
-export { Sum, AddList, DivideBy, ContainsString};
+export { Sum, AddList, DivideBy, ContainsString, ReSortedNumbers};
