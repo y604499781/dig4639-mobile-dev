@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/dig4639-mobile-dev/labs/3/static/css/main.ac2b9938.chunk.css",
-    "main.js": "/dig4639-mobile-dev/labs/3/static/js/main.954f2bfc.chunk.js",
-    "main.js.map": "/dig4639-mobile-dev/labs/3/static/js/main.954f2bfc.chunk.js.map",
-    "runtime-main.js": "/dig4639-mobile-dev/labs/3/static/js/runtime-main.df83ec0c.js",
-    "runtime-main.js.map": "/dig4639-mobile-dev/labs/3/static/js/runtime-main.df83ec0c.js.map",
-    "static/js/2.99184801.chunk.js": "/dig4639-mobile-dev/labs/3/static/js/2.99184801.chunk.js",
-    "static/js/2.99184801.chunk.js.map": "/dig4639-mobile-dev/labs/3/static/js/2.99184801.chunk.js.map",
-    "index.html": "/dig4639-mobile-dev/labs/3/index.html",
-    "precache-manifest.33a7eda040fb0a18154e03930889179e.js": "/dig4639-mobile-dev/labs/3/precache-manifest.33a7eda040fb0a18154e03930889179e.js",
-    "service-worker.js": "/dig4639-mobile-dev/labs/3/service-worker.js",
-    "static/css/main.ac2b9938.chunk.css.map": "/dig4639-mobile-dev/labs/3/static/css/main.ac2b9938.chunk.css.map",
-    "static/js/2.99184801.chunk.js.LICENSE.txt": "/dig4639-mobile-dev/labs/3/static/js/2.99184801.chunk.js.LICENSE.txt"
+    "main.css": "/dig4639-mobile-dev/static/css/main.ac2b9938.chunk.css",
+    "main.js": "/dig4639-mobile-dev/static/js/main.acb5d4d0.chunk.js",
+    "main.js.map": "/dig4639-mobile-dev/static/js/main.acb5d4d0.chunk.js.map",
+    "runtime-main.js": "/dig4639-mobile-dev/static/js/runtime-main.cf9a26cd.js",
+    "runtime-main.js.map": "/dig4639-mobile-dev/static/js/runtime-main.cf9a26cd.js.map",
+    "static/js/2.99184801.chunk.js": "/dig4639-mobile-dev/static/js/2.99184801.chunk.js",
+    "static/js/2.99184801.chunk.js.map": "/dig4639-mobile-dev/static/js/2.99184801.chunk.js.map",
+    "index.html": "/dig4639-mobile-dev/index.html",
+    "precache-manifest.acb7f46fa8fd6799217bdd493b972e46.js": "/dig4639-mobile-dev/precache-manifest.acb7f46fa8fd6799217bdd493b972e46.js",
+    "service-worker.js": "/dig4639-mobile-dev/service-worker.js",
+    "static/css/main.ac2b9938.chunk.css.map": "/dig4639-mobile-dev/static/css/main.ac2b9938.chunk.css.map",
+    "static/js/2.99184801.chunk.js.LICENSE.txt": "/dig4639-mobile-dev/static/js/2.99184801.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.df83ec0c.js",
+    "static/js/runtime-main.cf9a26cd.js",
     "static/js/2.99184801.chunk.js",
     "static/css/main.ac2b9938.chunk.css",
-    "static/js/main.954f2bfc.chunk.js"
+    "static/js/main.acb5d4d0.chunk.js"
   ]
 }
