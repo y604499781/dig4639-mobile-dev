@@ -1,55 +1,82 @@
 import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-
+import { Card, Button } from 'react-native-elements';
 import { MonoText } from '../components/StyledText';
 
-export default function HomeScreen() {
-  return (
-    <View style={styles.container}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <View style={styles.welcomeContainer}>
-          <Image
-            source={
-              __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
-          />
-        </View>
+const HEADERS = {
+  "method": "GET",
+  "headers": {
+    "API": "chen",
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  }
+}
 
-        <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
+export default class HomeScreen extends React.Component {
+  state = {contactList: []}
+  focusListener = undefined
 
-          <Text style={styles.getStartedText}>Open up the code for this screen:</Text>
+  constructor(props) {
+    super(props)
+    this.focusListener = props.navigation.addListener('focus', 
+      () => this.componentGainsFocus())
+  }
+  updateList() {
+    fetch('http://plato.mrl.ai:8080/contacts', HEADERS)
+      .then(res => res.json())
+      .then(body => {
+        this.setState({contactList:body.contacts})
+      })
+  }
+  removeContact(position) {
+    fetch('http://plato.mrl.ai:8080/contacts/remove', {
+      method: "POST",
+      headers: {
+        "API":"chen",
+        "Content-Type": "application/json",
+        "Accept":"application/json"
+      },
+      body: JSON.stringify({position:position})
+    })
+      .then(res => res.json())
+      .then(body => {
+        if(body.removed != undefined) {
+          const currentList = this.state.contactList.filter((v,i) =>
+            (i !== position))
+          this.setState({contactList: currentList})
+        }
+      })
+  }
+  componentGainsFocus() {
+    this.updateList()
+  }
+  componentWillUnmount() {
+    this.props.navigation.removeListener('focus', () => this.componentGainsFocus)
+  }
+  componentDidMount() {
+    this.updateList()
+  }
 
-          <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
-          </View>
-
-          <Text style={styles.getStartedText}>
-            Change any of the text, save the file, and your app will automatically reload.
-          </Text>
-        </View>
-
-        <View style={styles.helpContainer}>
-          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
-
-      <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
-
-        <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
-        </View>
+  render() {
+    return (
+      <View style={styles.container}>
+        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+          {
+            this.state.contactList.map((contact, i) => 
+                <Card key={i} title={contact.name} titleStyle={styles.card}>
+                  <Text style={styles.text}>{contact.number}</Text>
+                  <Button title="Remove" type="outline" style={styles.removeButton}
+                    onPress={() => this.removeContact(i)}>
+                    </Button>
+                </Card>
+            )
+          }         
+        </ScrollView>
       </View>
-    </View>
-  );
+    );
+  }
 }
 
 HomeScreen.navigationOptions = {
@@ -92,7 +119,7 @@ function handleHelpPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#89c4c0',
   },
   developmentModeText: {
     marginBottom: 20,
@@ -175,5 +202,21 @@ const styles = StyleSheet.create({
   helpLinkText: {
     fontSize: 14,
     color: '#2e78b7',
+  },
+  text: {
+    fontSize: 22,
+    textAlign: 'center',
+    fontFamily: 'lucida grande',
+  },
+  removeButton: {
+    position: 'relative',
+    paddingLeft: 100,
+    paddingRight: 100,
+    paddingTop: 10,
+  },
+  card: {
+    fontSize: 26,
+    color: '#4d9e6a',
+    fontFamily: 'lucida grande',
   },
 });

@@ -3,10 +3,9 @@ import * as React from 'react';
 import { Button, Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { CheckBox } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
-
 import { MonoText } from '../components/StyledText';
 
-export default class HomeScreen extends React.Component {
+export default class TodoScreen extends React.Component {
   state = {todoList:[]}
 
   componentDidMount() {
@@ -49,24 +48,26 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        <Text>Todo items:</Text>
         {this.state.todoList.map((item, index) =>
           <View key={index} style={styles.todoView}>
            <CheckBox
             checked={item.completed}
             onPress={() => this.completeTask(index, !item.completed)}
           />
-            <Text>{index}: {item.text} {item.completed ? "COMPLETED" : ""}
+            <Text>: {item.text} {item.completed ? "COMPLETED" : ""}
             </Text>
           </View>
         )}
+        <Button
+          title="Add Task" 
+          onPress={() => this.props.navigation.navigate('Add')}/>
       </ScrollView>
     </View>
     );
   }
 }
 
-HomeScreen.navigationOptions = {
+TodoScreen.navigationOptions = {
   header: null,
 };
 
